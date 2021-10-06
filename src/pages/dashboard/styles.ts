@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+interface IListProps {
+    length: number
+}
+
 
 export const Page = styled.div`
     display: flex;
@@ -14,13 +18,17 @@ export const Page = styled.div`
 export const ItensContainer = styled.div`
     display: flex;
     flex-direction: column;
-    min-width: 450px;
-    min-height: 700px;
+    width: 450px;
+    min-height: 500px;
     height: fit-content;
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 1px 3px #cdc6c6;
     align-items: center;
+    @media (max-width: 500px){
+        width: 100%;
+        height: 100%;
+    }
 `
 
 export const ItensHeader = styled.div`
@@ -37,13 +45,16 @@ export const ItensTitle = styled.p`
     font-family: 'Poppins', sans-serif;
     font-size: 23px;
     font-weight: bold;
+    margin-left: 10px;
 `
 
-export const ItensList = styled.ul`
+export const ItensList = styled.ul<IListProps>`
     display: flex;
     width: 100%;
     flex-direction: column;
     align-items: center;
+    max-height: 500px;
+    ${props => (props.length > 3 && `overflow-y: scroll;`)}
 `
 
 export const TotalContainer = styled.div`

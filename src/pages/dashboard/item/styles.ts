@@ -12,9 +12,7 @@ export const ItemContainer = styled.div`
 
 export const ItemImage = styled.img`
     display: flex;
-    background-color: #faa;
-    height: 100%;
-    min-width: 110px;
+    height: 110px;
 `
 
 export const ItemData = styled.div`
@@ -23,7 +21,7 @@ export const ItemData = styled.div`
     width: 100%;
     height: 100%;
     justify-content: center;
-    padding-left: 20px;
+    padding-left: 25px;
 `
 
 export const ItemTitle = styled.p`
