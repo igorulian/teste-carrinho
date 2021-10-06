@@ -15,7 +15,8 @@ export const ItensContainer = styled.div`
     display: flex;
     flex-direction: column;
     min-width: 450px;
-    height: 700px;
+    min-height: 700px;
+    height: fit-content;
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 1px 3px #cdc6c6;
@@ -48,10 +49,10 @@ export const ItensList = styled.ul`
 export const TotalContainer = styled.div`
     display: flex;
     width: 100%;
-    height: 100px;
+    height: 50px;
     align-items: center;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 10px;
 `
 
 export const TotalText = styled.p`    
@@ -59,7 +60,7 @@ export const TotalText = styled.p`
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     font-weight: bold;
-    margin: 0px 25px;
+    margin: 0px 20px;
 `
 
 export const EndButton = styled.button`
@@ -67,7 +68,7 @@ export const EndButton = styled.button`
     background-color: #3b74f2;
     color: #fff;
     width: 80%;
-    height: 80px;
+    height: 50px;
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
     font-family: 'Poppins', sans-serif;
     font-size: 17px;
@@ -78,4 +79,23 @@ export const EndButton = styled.button`
     &:hover {
         opacity: 0.8;
     }
+`
+
+export const FreeDelivery = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    background-color: #c7ffa6;
+    border-radius: 15px;
+    margin: 10px 0px;
+`
+export const FreeDeliveryText = styled.p`    
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #217a00;
 `

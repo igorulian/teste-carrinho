@@ -1,6 +1,6 @@
 import React from 'react'
 import Item from './item'
-import { ItensContainer, ItensHeader, ItensList, ItensTitle, TotalContainer, Page, TotalText, EndButton } from './styles'
+import { ItensContainer, ItensHeader, ItensList, ItensTitle, TotalContainer, Page, TotalText, EndButton, FreeDelivery, FreeDeliveryText } from './styles'
 
 const App:React.FC = () => {
   
@@ -23,6 +23,10 @@ const App:React.FC = () => {
             <TotalText> Total: </TotalText>
             <TotalText> R$9,90 </TotalText>
           </TotalContainer>
+
+          <FreeDelivery> 
+            <FreeDeliveryText> Parabéns! Você ganhou FRETE GRÁTIS!!</FreeDeliveryText>
+          </FreeDelivery>
 
           <EndButton> Finalizar Compra </EndButton>
         </ItensContainer>
