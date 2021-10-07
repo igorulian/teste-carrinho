@@ -19,7 +19,6 @@ export const ItensContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 450px;
-    min-height: 500px;
     height: fit-content;
     background-color: #fff;
     border-radius: 15px;
@@ -29,6 +28,9 @@ export const ItensContainer = styled.div`
         width: 100%;
         height: 100%;
     }
+    @media (max-height: 770px){
+        height: 100%;
+    }
 `
 
 export const ItensHeader = styled.div`
@@ -36,6 +38,7 @@ export const ItensHeader = styled.div`
     align-items: center;
     justify-content: center;
     height: 70px;
+    min-height: 50px;
     border-radius: 15px 15px 0px 0px;
     width: 100%;
 `
@@ -79,7 +82,7 @@ export const EndButton = styled.button`
     background-color: #3b74f2;
     color: #fff;
     width: 80%;
-    height: 50px;
+    min-height: 50px;
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
     font-family: 'Poppins', sans-serif;
     font-size: 17px;

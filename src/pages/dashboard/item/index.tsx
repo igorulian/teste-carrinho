@@ -15,8 +15,8 @@ const Item:React.FC<ItemProps> = (props:ItemProps) => {
         <ItemImage src={item.imageUrl}/>
         <ItemData>
             <ItemTitle> {item.name} </ItemTitle>
-            <ItemPrice1> R${item.sellingPrice / 100} </ItemPrice1>
-            <ItemPrice2> R${item.price / 100} </ItemPrice2>
+            <ItemPrice1> R${item.price / 100} </ItemPrice1>
+            <ItemPrice2> R${item.sellingPrice / 100} </ItemPrice2>
         </ItemData>
     </ItemContainer>
   )

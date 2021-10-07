@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { getRandomData } from '../../data/data'
+import { getRandomData } from '../../data/api'
 import { IItem } from '../../data/type'
 import Item from './item'
 import { ItensContainer, ItensHeader, ItensList, ItensTitle, TotalContainer, Page, TotalText, EndButton, FreeDelivery, FreeDeliveryText } from './styles'
 import { BsCart3 } from 'react-icons/bs'
+import Tip from './tip'
 
 const freeDeliveryPrice = 10
 
@@ -13,23 +14,22 @@ const App:React.FC = () => {
   const [isFreeDelivery, setFreeDelivery] = useState(false)
 
   useEffect(() => {
-      function getData(){
-          const rawdata = getRandomData()
+      const rawdata = getRandomData()
 
-          let rawtotal = 0
-          rawdata.forEach(item => {
-            rawtotal += item.price
-          })
+      let rawtotal = 0
+      rawdata.forEach(item => {
+        rawtotal += item.sellingPrice
+      })
 
-          setData(rawdata)
-          setTotal(rawtotal)
-          setFreeDelivery((rawtotal/100) > freeDeliveryPrice)
-      }
-      getData()
+      setData(rawdata)
+      setTotal(rawtotal)
+      setFreeDelivery((rawtotal/100) > freeDeliveryPrice)
   },[])
   
   return (
     <Page>
+        <Tip/>
+        
         <ItensContainer>
           
           <ItensHeader>
