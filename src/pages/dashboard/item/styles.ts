@@ -38,7 +38,6 @@ export const ItemPrice1 = styled.p`
     color: #ccc;
     margin-top: 12px;
     margin-bottom: 6px;
-    text-decoration: line-through;
     
 `
 export const ItemPrice2 = styled.p`
