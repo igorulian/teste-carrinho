@@ -28,7 +28,7 @@ export const ItensContainer = styled.div`
         width: 100%;
         height: 100%;
     }
-    @media (max-height: 770px){
+    @media (max-height: 700px){
         height: 100%;
     }
 `
